@@ -3,9 +3,7 @@ import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebas
 const firebaseConfig = {
  apiKey: "AIzaSyAgptBvWAhA-wS7kRxkss_UFoSFyfseoA0",
  authDomain: "si-todolista.firebaseapp.com",
- // ⚠️ OVO MORA BITI URL NJENE (si-todolista) REALTIME DATABASE!
- // U Firebase Console → Build → Realtime Database → Data (gore ima link/URL baze)
- // Primjer format-a: https://si-todolista-default-rtdb.europe-west1.firebasedatabase.app
+ 
  databaseURL: "https://si-todolista-default-rtdb.europe-west1.firebasedatabase.app",
  projectId: "si-todolista",
  storageBucket: "si-todolista.appspot.com",
@@ -39,4 +37,5 @@ onValue(tasksRef, (snapshot) => {
    li.textContent = task.text;
    list.appendChild(li);
  });
+
 });
